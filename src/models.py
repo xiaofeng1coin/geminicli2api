@@ -20,6 +20,7 @@ class OpenAIChatCompletionRequest(BaseModel):
     n: Optional[int] = None
     seed: Optional[int] = None
     response_format: Optional[Dict[str, Any]] = None
+    reasoning_effort: Optional[str] = None
     
     class Config:
         extra = "allow"  # Allow additional fields not explicitly defined
@@ -70,3 +71,4 @@ class GeminiCandidate(BaseModel):
 
 class GeminiResponse(BaseModel):
     candidates: List[GeminiCandidate]
+
